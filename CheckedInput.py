@@ -10,7 +10,8 @@ class CheckedInput:
     def input_number(prompt, min_, max_):
         '''
         Input a number and check if it's in range.
-        The input loop will continue as long 
+        The input loop will continue as long as the number is not within range.
+        '''
         num = None
         
         while True:
@@ -33,6 +34,10 @@ class CheckedInput:
         return num
 
     def input_choice(prompt, choices):
+        '''
+        Input a string that must be equal to one of the strings in the choices list.
+        Input loop will continue as long as the input string is not a valid choice.
+        '''
         c = None
 
         while True:
@@ -43,9 +48,10 @@ class CheckedInput:
             else: break
 
         return c
-        
-    def input_numeric_list(prompt, choices):
-        pass
-
+    
     def input_yes_no(prompt):
+        '''
+        Input a yes or a no answer.
+        Input loop will continue as long as the answer is not a yes or a no.
+        '''
         return input_choice(prompt, ['y', 'n', 'Y', 'N'])
