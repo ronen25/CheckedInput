@@ -1,11 +1,3 @@
-'''
-A module that contains functions that check the input they get.
-
-I wrote this module because I needed to write command-line programs that
-checked their input. For example, one program needed to input numbers in
-a certain range.
-Writing input loops every time was tedious, so I decided to write a module for that.
-'''
 class CheckedInput:
     def input_number(prompt, min_, max_):
         '''
