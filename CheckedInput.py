@@ -75,7 +75,7 @@ class CheckedInput:
         print(prompt)
         
         # Print options
-        for i, choice in zip(range(1, len(choices)), choices):
+        for i, choice in zip(range(1, len(choices) + 1), choices):
             print('{}) {}'.format(i, choice))
             
         # Print abort option, maybe?
@@ -84,4 +84,4 @@ class CheckedInput:
             print('0) Abort')
             
         # Now do actual input!
-        return input_number(min_number, len(choices))
+        return CheckedInput.input_number('> ', min_number, len(choices))
