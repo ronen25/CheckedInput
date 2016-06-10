@@ -14,7 +14,7 @@ class CheckedInput:
             # Check if numeric
             try:
                 num = int(num)
-            except KeyboardError:
+            except KeyboardInterrupt:
                 return None
             except:
                 print('error: input is not numeric')
@@ -39,7 +39,7 @@ class CheckedInput:
         while True:
             try:
                 c = input(prompt)
-            except KeyboardError:
+            except KeyboardInterrupt:
                 return None
 
             if c not in choices:
