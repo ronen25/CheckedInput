@@ -9,10 +9,10 @@ class CheckedInput:
         
         while True:
             # Input
-            num = input(prompt)
-
-            # Check if numeric
             try:
+                num = input(prompt)
+
+                # Check if numeric
                 num = int(num)
             except KeyboardInterrupt:
                 return None
