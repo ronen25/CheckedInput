@@ -54,9 +54,9 @@ class CheckedInput:
         Input loop will continue as long as the answer is not a yes or a no, or Ctrl+C
         is pressed. In that case, the function returns None.
         '''
-        ans = input_choice(prompt, ['y', 'n', 'Y', 'N'])
+        ans = CheckedInput.input_choice(prompt, ['y', 'n', 'Y', 'N'])
         return ans[0].lower()
-        
+
     def input_choice_numeric_list(prompt, choices, allow_abort=False):
         '''
         Input a string that must be equal to one of the strings in the choices list.
